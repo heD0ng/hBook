@@ -1,9 +1,9 @@
 module.exports = {
     // 书籍信息
-    title: '书名',
-    description: '描述',
-    isbn: '图书编号',
-    author: '作者',
+    title: '前端学习',
+    description: '个人博客',
+    isbn: 'hd-gitbook',
+    author: 'hedong',
     lang: 'zh-cn',
 
     // 插件列表
