@@ -6,3 +6,4 @@
 
 * [性能优化](chapter/性能优化/README.md)
     * [PWA](chapter/性能优化/PWA.md)
+    * [性能优化在工作中的实践](chapter/性能优化/record.md)
