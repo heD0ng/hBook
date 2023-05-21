@@ -5,7 +5,7 @@
 * [HTML](chapter/html/README.md)
 
 * [web安全](chapter/safety/README.md)
-    * [web安全](chapter/safety/index.md)
+    * [基础知识](chapter/safety/index.md)
     * [web安全在工作中的实践](chapter/safety/record.md)
 
 * [性能优化](chapter/性能优化/README.md)
