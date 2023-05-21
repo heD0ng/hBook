@@ -1,0 +1,600 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>web安全 · 前端学习</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hedong">
+        <meta name="identifier" content="hd-gitbook" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="record.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../introduction.html">
+            
+                <a href="../../introduction.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    [web安全]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    web安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="record.html">
+            
+                <a href="record.html">
+            
+                    
+                    web安全在工作中的实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../性能优化/">
+            
+                <a href="../性能优化/">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../性能优化/PWA.html">
+            
+                <a href="../性能优化/PWA.html">
+            
+                    
+                    PWA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../性能优化/record.html">
+            
+                <a href="../性能优化/record.html">
+            
+                    
+                    性能优化在工作中的实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../性能优化/">
+            
+                <a href="../性能优化/">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../性能优化/PWA.html">
+            
+                <a href="../性能优化/PWA.html">
+            
+                    
+                    PWA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../性能优化/record.html">
+            
+                <a href="../性能优化/record.html">
+            
+                    
+                    性能优化在工作中的实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >web安全</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x6709;&#x54EA;&#x4E9B;&#x53EF;&#x80FD;&#x5F15;&#x8D77;&#x524D;&#x7AEF;&#x5B89;&#x5168;&#x7684;&#x95EE;&#x9898;&#xFF1F;">&#x6709;&#x54EA;&#x4E9B;&#x53EF;&#x80FD;&#x5F15;&#x8D77;&#x524D;&#x7AEF;&#x5B89;&#x5168;&#x7684;&#x95EE;&#x9898;&#xFF1F;</h2>
+<ul>
+<li><strong>&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x653B;&#x51FB;&#xFF08;Cross-Site Scripting&#xFF0C;XSS&#xFF09;</strong>&#xFF1A;&#x4E00;&#x79CD;&#x4EE3;&#x7801;&#x6CE8;&#x5165;&#x65B9;&#x5F0F;&#xFF0C;&#x4E3A;&#x4E86;&#x4E0E; CSS &#x533A;&#x5206;&#x6240;&#x4EE5;&#x88AB;&#x79F0;&#x4E3A; XSS&#x3002;&#x65E9;&#x671F;&#x5E38;&#x89C1;&#x4E8E;&#x7F51;&#x7EDC;&#x8BBA;&#x575B;&#xFF0C;&#x8D77;&#x56E0;&#x662F;&#x7F51;&#x7AD9;&#x6CA1;&#x6709;&#x5BF9;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#x8FDB;&#x884C;&#x4E25;&#x683C;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x4F7F;&#x5F97;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x5C06;&#x811A;&#x672C;&#x4E0A;&#x4F20;&#x5230;&#x5E16;&#x5B50;&#x8BA9;&#x5176;&#x4ED6;&#x554A;&#x4EBA;&#x5728;&#x6D4F;&#x89C8;&#x5230;&#x6709;&#x6076;&#x610F;&#x811A;&#x672C;&#x7684;&#x9875;&#x9762;&#x3002;&#x5176;&#x6CE8;&#x5165;&#x65B9;&#x5F0F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5305;&#x62EC;&#x4F46;&#x4E0D;&#x9650;&#x4E8E; JavaScript / VBScript / CSS / Flash &#x7B49;&#xFF1B;</li>
+<li><strong>iframe&#x6EE5;&#x7528;</strong>&#xFF1A;iframe &#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x7531;&#x7B2C;&#x4E09;&#x65B9;&#x6765;&#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x5B83;&#x4EEC;&#x4E0D;&#x53D7;&#x6211;&#x4EEC;&#x63A7;&#x5236;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x5728; iframe &#x4E2D;&#x8FD0;&#x884C; JavaScript &#x811A;&#x672C;&#x3001;Flash &#x63D2;&#x4EF6;&#x3001;&#x5F39;&#x51FA;&#x5BF9;&#x8BDD;&#x6846;&#x7B49;&#xFF0C;&#x8FD9;&#x4E9B;&#x53EF;&#x80FD;&#x4F1A;&#x7834;&#x574F;&#x524D;&#x7AEF;&#x7528;&#x6237;&#x7684;&#x4F53;&#x9A8C;&#xFF1B;</li>
+<li><strong>&#x8DE8;&#x7AD9;&#x8BF7;&#x6C42;&#x4F2A;&#x9020;&#xFF08;Cross-Site Request Forgeries&#xFF0C;CSRF&#xFF09;</strong>&#xFF1A;&#x6307;&#x653B;&#x51FB;&#x8005;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x597D;&#x7684;&#x9677;&#x9631;&#xFF0C;&#x5F3A;&#x5236;&#x5BF9;&#x4E8E;&#x5B8C;&#x6210;&#x8BA4;&#x8BC1;&#x7684;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x975E;&#x9884;&#x671F;&#x7684;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#x6216;&#x8BBE;&#x5B9A;&#x4FE1;&#x606F;&#x7B49;&#x67D0;&#x4E9B;&#x72B6;&#x6001;&#x66F4;&#x65B0;&#xFF0C;&#x5C5E;&#x4E8E;&#x88AB;&#x52A8;&#x653B;&#x51FB;&#xFF1B;</li>
+<li><strong>&#x6076;&#x610F;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;</strong>&#xFF1A;&#x65E0;&#x8BBA;&#x5F00;&#x53D1;&#x670D;&#x52A1;&#x7AEF;&#x8FD8;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x90FD;&#x5728;&#x501F;&#x52A9;&#x5F00;&#x53D1;&#x6846;&#x67B6;&#x548C;&#x5404;&#x79CD;&#x7B2C;&#x4E09;&#x65B9;&#x5DE5;&#x5177;&#x5E93;&#x8FDB;&#x884C;&#x5FEB;&#x901F;&#x5F00;&#x53D1;&#xFF0C;&#x4E00;&#x65E6;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x88AB;&#x690D;&#x5165;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x4EBA;&#x5BB9;&#x6613;&#x5F15;&#x8D77;&#x5B89;&#x5168;&#x95EE;&#x9898;&#x3002;</li>
+</ul>
+<h2 id="xss-&#x653B;&#x51FB;&#xFF08;&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x653B;&#x51FB;&#xFF09;">XSS &#x653B;&#x51FB;&#xFF08;&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x653B;&#x51FB;&#xFF09;</h2>
+<blockquote>
+<p>  &#x82F1;&#x6587;&#x5168;&#x79F0;&#xFF1A;Cross Site Script&#xFF0C;XSS &#x653B;&#x51FB;&#xFF0C;&#x901A;&#x5E38;&#x6307;&#x9ED1;&#x5BA2;&#x901A;&#x8FC7; HTML &#x6CE8;&#x5165;&#x7BE1;&#x6539;&#x4E86;&#x7F51;&#x9875;&#xFF0C;&#x63D2;&#x5165;&#x6076;&#x610F;&#x811A;&#x672C;&#xFF0C;&#x4ECE;&#x800C;&#x5728;&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x7F51;&#x9875;&#x65F6;&#xFF0C;&#x63A7;&#x5236;&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x4E00;&#x79CD;&#x884C;&#x4E3A;</p>
+</blockquote>
+<h3 id="xss&#x5206;&#x7C7B;">XSS&#x5206;&#x7C7B;</h3>
+<p>&#x6839;&#x636E;&#x653B;&#x51FB;&#x7684;&#x6765;&#x6E90;&#xFF0C;XSS &#x653B;&#x51FB;&#x53EF;&#x5206;&#x4E3A;&#x5B58;&#x50A8;&#x578B;&#x3001;&#x53CD;&#x5C04;&#x578B;&#x548C; DOM&#x578B;&#x4E09;&#x79CD;&#x3002;</p>
+<ul>
+<li>&#x5B58;&#x50A8;&#x533A;&#xFF1A;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x5B58;&#x653E;&#x7684;&#x4F4D;&#x7F6E;&#xFF1B;</li>
+<li>&#x63D2;&#x5165;&#x70B9;&#xFF1A;&#x7531;&#x8C01;&#x53D6;&#x5F97;&#x6076;&#x610F;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x63D2;&#x5165;&#x5230;&#x7F51;&#x7AD9;&#x3002;</li>
+</ul>
+<h4 id="&#x5B58;&#x50A8;&#x578B;xss">&#x5B58;&#x50A8;&#x578B;XSS</h4>
+<blockquote>
+<p>  &#x539F;&#x7406;&#xFF1A;&#x4E00;&#x822C;&#x662F;&#x653B;&#x51FB;&#x8005;&#x8F93;&#x5165;&#x7684;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x5B58;&#x50A8;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x5C06; XSS &#x4EE3;&#x7801;&#x53D1;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF08;&#x4E0D;&#x7BA1;&#x662F;&#x6570;&#x636E;&#x5E93;&#x3001;&#x5185;&#x5B58;&#x8FD8;&#x662F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF09;&#xFF0C;&#x53EA;&#x8981;&#x53D7;&#x5BB3;&#x8005;&#x6D4F;&#x89C8;&#x5305;&#x542B;&#x6B21;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x7684;&#x7F51;&#x9875;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x6076;&#x610F;&#x4EE3;&#x7801;</p>
+</blockquote>
+<p>&#x5B58;&#x50A8;&#x578B;&#x653B;&#x51FB;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x653B;&#x51FB;&#x8005;&#x5C06;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x63D0;&#x4EA4;&#x5230;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#xFF1B;</li>
+<li>&#x7528;&#x6237;&#x6253;&#x5F00;&#x76EE;&#x6807;&#x7F51;&#x7AD9;&#x65F6;&#xFF0C;&#x7F51;&#x7AD9;&#x670D;&#x52A1;&#x5668;&#x53D6;&#x51FA;&#x5305;&#x542B;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x62FC;&#x63A5;&#x5728; HTML &#x4E2D;&#x8FD4;&#x56DE;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#xFF1B;</li>
+<li>&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x5668;&#x63A5;&#x6536;&#x5230;&#x76F8;&#x5E94;&#x540E;&#x89E3;&#x6790;&#x6267;&#x884C;&#xFF0C;&#x6DF7;&#x5728;&#x5176;&#x4E2D;&#x7684;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x4E5F;&#x88AB;&#x6267;&#x884C;&#xFF1B;</li>
+<li>&#x6076;&#x610F;&#x4EE3;&#x7801;&#x7A83;&#x53D6;&#x7528;&#x6237;&#x6570;&#x636E;&#x5E76;&#x53D1;&#x9001;&#x5230;&#x653B;&#x51FB;&#x8005;&#x7F51;&#x7AD9;&#xFF1B;&#x6216;&#x5192;&#x5145;&#x7528;&#x6237;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x8C03;&#x7528;&#x76EE;&#x6807;&#x7F51;&#x7AD9;&#x63A5;&#x53E3;&#x6267;&#x884C;&#x653B;&#x51FB;&#x8005;&#x6307;&#x5B9A;&#x7684;&#x64CD;&#x4F5C;&#x3002;</li>
+</ol>
+<p>&#x8FD9;&#x79CD;&#x653B;&#x51FB;&#x5E38;&#x89C1;&#x4E8E;&#x5E26;&#x6709;&#x7528;&#x6237;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x6BD4;&#x5982;&#x8BBA;&#x575B;&#x53D1;&#x5E16;&#x3001;&#x5546;&#x54C1;&#x8BC4;&#x8BBA;&#x3001;&#x7528;&#x6237;&#x79C1;&#x4FE1;&#x7B49;&#x3002;</p>
+<h4 id="&#x53CD;&#x5C04;&#x578B;xss">&#x53CD;&#x5C04;&#x578B;XSS</h4>
+<blockquote>
+<p>  &#x539F;&#x7406;&#xFF1A;&#x53CD;&#x5C04;&#x578B; XSS&#xFF0C;&#x4E5F;&#x53EB;&#x975E;&#x6301;&#x4E45;&#x578B; XSS&#xFF0C;&#x662F;&#x6307;&#x53D1;&#x751F;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;XSS &#x4EE3;&#x7801;&#x51FA;&#x73B0;&#x5728;&#x8BF7;&#x6C42; URL &#x4E2D;&#xFF0C;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x63D0;&#x4EA4;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x89E3;&#x6790;&#x5E76;&#x54CD;&#x5E94;&#x3002;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#x4E2D;&#x5305;&#x542B; XSS &#x4EE3;&#x7801;&#xFF0C;&#x6700;&#x540E;&#x6D4F;&#x89C8;&#x5668;&#x89E3;&#x6790;&#x5E76;&#x6267;&#x884C;</p>
+</blockquote>
+<p>&#x53CD;&#x5C04;&#x578B;&#x653B;&#x51FB;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x653B;&#x51FB;&#x8005;&#x6784;&#x9020;&#x51FA;&#x7279;&#x6B8A;&#x7684; URL&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6076;&#x610F;&#x4EE3;&#x7801;&#xFF1B;</li>
+<li>&#x7528;&#x6237;&#x6253;&#x5F00;&#x5E26;&#x6709;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x7684; URL &#x65F6;&#xFF0C;&#x7F51;&#x7AD9;&#x670D;&#x52A1;&#x7AEF;&#x5C06;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x4ECE; URL &#x4E2D;&#x53D6;&#x51FA;&#xFF0C;&#x62FC;&#x63A5;&#x5728; HTML &#x4E2D;&#x8FD4;&#x56DE;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#xFF1B;</li>
+<li>&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x5668;&#x63A5;&#x6536;&#x5230;&#x54CD;&#x5E94;&#x540E;&#x89E3;&#x6790;&#x6267;&#x884C;&#xFF0C;&#x6DF7;&#x5728;&#x5176;&#x4E2D;&#x7684;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x4E5F;&#x88AB;&#x6267;&#x884C;&#xFF1B;</li>
+<li>&#x6076;&#x610F;&#x4EE3;&#x7801;&#x7A83;&#x53D6;&#x7528;&#x6237;&#x6570;&#x636E;&#x5E76;&#x53D1;&#x9001;&#x5230;&#x653B;&#x51FB;&#x8005;&#x7F51;&#x7AD9;&#xFF1B;&#x6216;&#x5192;&#x5145;&#x7528;&#x6237;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x8C03;&#x7528;&#x76EE;&#x6807;&#x7F51;&#x7AD9;&#x63A5;&#x53E3;&#x6267;&#x884C;&#x653B;&#x51FB;&#x8005;&#x6307;&#x5B9A;&#x7684;&#x64CD;&#x4F5C;&#x3002;</li>
+</ol>
+<p>&#x53CD;&#x5C04;&#x578B; XSS &#x6F0F;&#x6D1E;&#x5E38;&#x89C1;&#x4E8E;&#x901A;&#x8FC7; URL &#x4F20;&#x53C2;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x6BD4;&#x5982;&#x7F51;&#x7AD9;&#x641C;&#x7D22;&#x3001;&#x8DF3;&#x8F6C;&#x7B49;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x9700;&#x8981;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x6253;&#x5F00;&#x6076;&#x610F;&#x7684; URL &#x624D;&#x80FD;&#x751F;&#x6548;&#xFF0C;&#x56E0;&#x6B64;&#x653B;&#x51FB;&#x8005;&#x5F80;&#x5F80;&#x4F1A;&#x7ED3;&#x5408;&#x591A;&#x79CD;&#x624B;&#x6BB5;&#x8BF1;&#x5BFC;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x3002;</p>
+<h4 id="dom&#x578B;xss">DOM&#x578B;XSS</h4>
+<blockquote>
+<p>  &#x539F;&#x7406;&#xFF1A;&#x540C;&#x4EE5;&#x4E0A;&#x53CD;&#x5C04;&#x578B;XSS &#x653B;&#x51FB;&#x4E00;&#x6837;&#x3002;</p>
+</blockquote>
+<p>DOM&#x578B;&#x653B;&#x51FB;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x653B;&#x51FB;&#x8005;&#x6784;&#x9020;&#x51FA;&#x7279;&#x6B8A;&#x7684; URL&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6076;&#x610F;&#x4EE3;&#x7801;&#xFF1B;</li>
+<li>&#x7528;&#x6237;&#x6253;&#x5F00;&#x5E26;&#x6709;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x7684; URL&#xFF1B;</li>
+<li>&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x5668;&#x63A5;&#x6536;&#x5230;&#x76F8;&#x5E94;&#x540E;&#x89E3;&#x6790;&#x6267;&#x884C;&#xFF0C;&#x524D;&#x7AEF; js &#x53D6;&#x51FA; URL &#x4E2D;&#x7684;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x5E76;&#x6267;&#x884C;&#xFF1B;</li>
+<li>&#x6076;&#x610F;&#x4EE3;&#x7801;&#x7A83;&#x53D6;&#x7528;&#x6237;&#x6570;&#x636E;&#x5E76;&#x53D1;&#x9001;&#x5230;&#x653B;&#x51FB;&#x8005;&#x7F51;&#x7AD9;&#xFF1B;&#x6216;&#x5192;&#x5145;&#x7528;&#x6237;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x8C03;&#x7528;&#x76EE;&#x6807;&#x7F51;&#x7AD9;&#x63A5;&#x53E3;&#x6267;&#x884C;&#x653B;&#x51FB;&#x8005;&#x6307;&#x5B9A;&#x7684;&#x64CD;&#x4F5C;&#x3002;</li>
+</ol>
+<p>DOM&#x578B;XSS &#x548C;&#x524D;&#x4E24;&#x79CD; XSS &#x7684;&#x533A;&#x522B;&#xFF1A;DOM&#x578B;&#x53D6;&#x51FA;&#x548C;&#x6267;&#x884C;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x7531;&#x6D4F;&#x89C8;&#x5668;&#x5B8C;&#x6210;&#xFF0C;&#x5C5E;&#x4E8E;&#x524D;&#x7AEF;&#x81EA;&#x8EAB;&#x7684;&#x5B89;&#x5168;&#x6F0F;&#x6D1E;&#xFF1B;&#x800C;&#x5176;&#x4ED6;&#x4E24;&#x79CD;&#x5219;&#x5C5E;&#x4E8E;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x5B89;&#x5168;&#x6F0F;&#x6D1E;&#x3002;</p>
+<h3 id="xss&#x9632;&#x5FA1;">XSS&#x9632;&#x5FA1;</h3>
+<p>XSS &#x653B;&#x51FB;&#x6709;&#x4E24;&#x5927;&#x8981;&#x7D20;&#xFF1A;</p>
+<ul>
+<li>&#x653B;&#x51FB;&#x8005;&#x63D0;&#x4EA4;&#x6076;&#x610F;&#x4EE3;&#x7801;&#xFF1B;</li>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x6267;&#x884C;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x3002;</li>
+</ul>
+<h4 id="&#x8F93;&#x5165;&#x8FC7;&#x6EE4;">&#x8F93;&#x5165;&#x8FC7;&#x6EE4;</h4>
+<p>&#x5728;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x65F6;&#xFF0C;&#x7531;&#x524D;&#x7AEF;&#x8FC7;&#x6EE4;&#x8F93;&#x5165;&#xFF0C;&#x7136;&#x540E;&#x63D0;&#x4EA4;&#x5230;&#x540E;&#x7AEF;&#xFF0C;&#x662F;&#x5426;&#x53EF;&#x884C;&#xFF1F;</p>
+<p>&#x7B54;&#x6848;&#x662F; <strong>&#x4E0D;&#x53EF;&#x884C;</strong>&#x3002;&#x4E00;&#x65E6;&#x653B;&#x51FB;&#x8005;&#x7ED5;&#x8FC7;&#x524D;&#x7AEF;&#x8FC7;&#x6EE4;&#xFF0C;&#x76F4;&#x63A5;&#x6784;&#x9020;&#x8BF7;&#x6C42;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x63D0;&#x4EA4;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x4E86;&#x3002;</p>
+<p>&#x90A3;&#x6362;&#x4E00;&#x4E2A;&#x8FC7;&#x6EE4;&#x65F6;&#x673A;&#xFF1A;&#x540E;&#x7AEF;&#x5728;&#x5199;&#x5165;&#x6570;&#x636E;&#x5E93;&#x524D;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#xFF0C;&#x7136;&#x540E;&#x628A; <em>&#x5B89;&#x5168;&#x7684;</em> &#x5185;&#x5BB9;&#x8FD4;&#x56DE;&#x7ED9;&#x524D;&#x7AEF;&#xFF0C;&#x662F;&#x5426;&#x53EF;&#x884C;&#xFF1F;</p>
+<p>&#x7B54;&#x6848;&#x662F; <strong>&#x4E0D;&#x53EF;&#x884C;</strong>&#x3002;&#x56E0;&#x4E3A;&#xFF0C;&#x5728;&#x5199;&#x5165;&#x6570;&#x636E;&#x5E93;&#x524D;&#x8FDB;&#x884C;&#x8F93;&#x5165;&#x8FC7;&#x6EE4;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x8FC7;&#x6EE4;&#x6389;&#x4E00;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#xFF0C;&#x4F46;&#x662F;&#x7528;&#x6237;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x662F;&#x5F88;&#x590D;&#x6742;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x5F88;&#x96BE;&#x5224;&#x65AD;&#x51FA;&#x5185;&#x5BB9;&#x4F1A;&#x8F93;&#x51FA;&#x5230;&#x54EA;&#x91CC;&#xFF0C;&#x4E00;&#x65E6;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x7ECF;&#x8FC7;&#x4E86;&#x8F6C;&#x7801;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x5C31;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;&#x7801;&#xFF0C;&#x800C;&#x524D;&#x7AEF;&#x4E0D;&#x540C;&#x7684;&#x4F4D;&#x7F6E;&#x6240;&#x9700;&#x8981;&#x7684;&#x7F16;&#x7801;&#x4E5F;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x3002;&#x56E0;&#x6B64;&#x8F93;&#x5165;&#x4FA7;&#x8FC7;&#x6EE4;&#x867D;&#x7136;&#x80FD;&#x591F;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x89E3;&#x51B3; XSS &#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x5F15;&#x5165;&#x5F88;&#x5927;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x548C;&#x4E71;&#x7801;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x5E94;&#x5F53;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x5BF9;&#x4E8E;&#x660E;&#x786E;&#x7684;&#x8F93;&#x5165;&#x7C7B;&#x578B;&#xFF0C;&#x4F8B;&#x5982;&#x6570;&#x5B57;&#x3001;URL&#x3001;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x3001;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#x7B49;&#x5185;&#x5BB9;&#xFF0C;&#x8FDB;&#x884C;&#x8F93;&#x5165;&#x8FC7;&#x6EE4;&#x8FD8;&#x662F;&#x5FC5;&#x8981;&#x7684;&#x3002;</p>
+<h4 id="&#x9632;&#x6B62;&#x6267;&#x884C;&#x6076;&#x610F;&#x4EE3;&#x7801;">&#x9632;&#x6B62;&#x6267;&#x884C;&#x6076;&#x610F;&#x4EE3;&#x7801;</h4>
+<p>&#x5B58;&#x50A8;&#x578B;&#x548C;&#x53CD;&#x5C04;&#x578B;XSS &#x90FD;&#x662F;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x53D6;&#x51FA;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x540E;&#xFF0C;&#x63D2;&#x5165;&#x5230;&#x54CD;&#x5E94; HTML &#x4E2D;&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x7F16;&#x5199;&#x7684; <em>&#x6570;&#x636E;</em> &#x88AB;&#x5185;&#x5D4C;&#x5230; <em>&#x4EE3;&#x7801;</em> &#x4E2D;&#xFF0C;&#x88AB;&#x6D4F;&#x89C8;&#x5668;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x9884;&#x9632;&#x8FD9;&#x4E24;&#x79CD;&#x6F0F;&#x6D1E;&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x5E38;&#x89C1;&#x7684;&#x505A;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>&#x6539;&#x6210;&#x7EAF;&#x524D;&#x7AEF;&#x6E32;&#x67D3;&#xFF0C;&#x628A;&#x4EE3;&#x7801;&#x548C;&#x6570;&#x636E;&#x5206;&#x9694;&#x5F00;&#xFF1B;</li>
+<li>&#x5BF9; HTML &#x505A;&#x5145;&#x5206;&#x8F6C;&#x4E49;&#x3002;</li>
+</ul>
+<h4 id="&#x7EAF;&#x524D;&#x7AEF;&#x6E32;&#x67D3;">&#x7EAF;&#x524D;&#x7AEF;&#x6E32;&#x67D3;</h4>
+<p>&#x76EE;&#x524D;&#x4E3B;&#x6D41;&#x6846;&#x67B6;&#x91C7;&#x7528;&#x7684; SPA &#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x660E;&#x786E;&#x544A;&#x8BC9;&#x6D4F;&#x89C8;&#x5668;&#xFF1A;&#x4E0B;&#x9762;&#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x6587;&#x672C;&#xFF08;<code>.innerText</code>&#xFF09;&#xFF0C;&#x8FD8;&#x662F;&#x5C5E;&#x6027;&#xFF08;<code>.setAttribute</code>&#xFF09;&#xFF0C;&#x8FD8;&#x662F;&#x6837;&#x5F0F;&#xFF08;<code>.style</code>&#xFF09;&#x7B49;&#x7B49;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x4F1A;&#x8F7B;&#x6613;&#x88AB;&#x6B3A;&#x9A97;&#xFF0C;&#x6267;&#x884C;&#x4E0E;&#x5176;&#x5916;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x4F46;&#x7EAF;&#x524D;&#x7AEF;&#x6E32;&#x67D3;&#x4ECD;&#x9700;&#x8981;&#x907F;&#x514D; DOM&#x578B; XSS&#x653B;&#x51FB;&#x3002;</p>
+<p>&#x5728;&#x5F88;&#x591A;&#x5185;&#x90E8;&#x3001;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x7EAF;&#x524D;&#x7AEF;&#x6E32;&#x67D3;&#x662F;&#x975E;&#x5E38;&#x5408;&#x9002;&#x7684;&#xFF0C;&#x4F46;&#x5BF9;&#x4E8E;&#x9AD8;&#x6027;&#x80FD;&#x8981;&#x6C42;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x6709; seo &#x9700;&#x6C42;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x4ECD;&#x7136;&#x8981;&#x9762;&#x5BF9;&#x62FC;&#x63A5; HTML &#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h4 id="&#x8F6C;&#x4E49;-html">&#x8F6C;&#x4E49; HTML</h4>
+<p>&#x5982;&#x679C;&#x62FC;&#x63A5; HTML &#x662F;&#x5FC5;&#x8981;&#x7684;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x91C7;&#x7528;&#x5408;&#x9002;&#x7684;&#x8F6C;&#x4E49;&#x5E93;&#x5BF9; HTML &#x6A21;&#x7248;&#x7684;&#x5404;&#x5904;&#x63D2;&#x5165;&#x70B9;&#x8FDB;&#x884C;&#x5145;&#x5206;&#x7684;&#x8F6C;&#x4E49;&#x3002;</p>
+<p>&#x5E38;&#x89C1;&#x7684;&#x6A21;&#x7248;&#x5F15;&#x64CE;&#x6709; ejs &#x7B49;&#xFF0C;&#x5BF9;&#x4E8E; HTML &#x8F6C;&#x4E49;&#x901A;&#x5E38;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x89C4;&#x5219;&#xFF0C;&#x5C31;&#x662F;&#x628A; <code>&amp; &lt; &gt; &quot; &apos; /</code> &#x8FD9;&#x51E0;&#x4E2A;&#x5B57;&#x7B26;&#x8F6C;&#x4E49;&#x6389;&#x3002;&#x5F53;&#x7136;&#x8FD9;&#x786E;&#x5B9E;&#x53EF;&#x4EE5;&#x8D77;&#x5230;&#x4E00;&#x5B9A;&#x7684;&#x9632;&#x62A4;&#x4F5C;&#x7528;&#xFF0C;&#x4F46;&#x8FD8;&#x4E0D;&#x591F;&#x5B8C;&#x5584;&#x3002;</p>
+<h3 id="&#x9884;&#x9632;-dom&#x578B;-xss-&#x653B;&#x51FB;">&#x9884;&#x9632; DOM&#x578B; XSS &#x653B;&#x51FB;</h3>
+<p>&#x5728;&#x4F7F;&#x7528; <code>.innerHTML</code>&#x3001;<code>.outerHTML</code>&#x3001;<code>document.write()</code> &#x662F;&#x8981;&#x7279;&#x522B;&#x5C0F;&#x5FC3;&#xFF0C;&#x4E0D;&#x8981;&#x628A;&#x4E0D;&#x53EF;&#x4FE1;&#x7684;&#x6570;&#x636E;&#x4F5C;&#x4E3A; HTML &#x63D2;&#x5165;&#x5230;&#x7F51;&#x9875;&#xFF0C;&#x5C3D;&#x91CF;&#x4F7F;&#x7528; <code>.textContent</code>&#x3001;<code>.setAttribute()</code> &#x7B49;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x662F;&#x4F7F;&#x7528; Vue / React &#x65F6;&#xFF0C;&#x4E0D;&#x8981;&#x4F7F;&#x7528; <code>v-html</code> / <code>dangerouslySetInnerHTML</code> &#xFF0C;&#x5728;&#x524D;&#x7AEF;&#x907F;&#x514D; innerHTML&#x3001;outerHTML &#x7684; XSS &#x9690;&#x60A3;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;DOM &#x4E2D;&#x7684;&#x5185;&#x8054;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x5668;&#xFF0C;&#x5982; <code>location</code>&#x3001;<code>onclick</code>&#x3001;<code>onerror</code>&#x3001;<code>onload</code>&#xFF0C;<code>&lt;a&gt;</code> &#x6807;&#x7B7E;&#x7684; href &#x5C5E;&#x6027;&#xFF0C;JavaScript &#x7684; <code>eval()</code>&#x3001;<code>setTimeout()</code>&#x3001;<code>setInterval()</code> &#x7B49;&#x90FD;&#x80FD;&#x628A;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x53EF;&#x4FE1;&#x7684;&#x6570;&#x636E;&#x62FC;&#x63A5;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x4F20;&#x9012;&#x7ED9;&#x8FD9;&#x4E9B; API&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x4EA7;&#x751F;&#x5B89;&#x5168;&#x9690;&#x60A3;&#xFF0C;&#x52A1;&#x5FC5;&#x8C28;&#x614E;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="&#x5176;&#x5B83;-xss-&#x9632;&#x8303;&#x63AA;&#x65BD;">&#x5176;&#x5B83; XSS &#x9632;&#x8303;&#x63AA;&#x65BD;</h3>
+<p>&#x867D;&#x7136;&#x5728;&#x6E32;&#x67D3;&#x9875;&#x9762;&#x548C;&#x6267;&#x884C; JavaScript &#x65F6;&#xFF0C;&#x901A;&#x8FC7;&#x8C28;&#x614E;&#x7684;&#x8F6C;&#x4E49;&#x53EF;&#x4EE5;&#x9632;&#x6B62; XSS &#x7684;&#x53D1;&#x751F;&#xFF0C;&#x4F46;&#x5B8C;&#x5168;&#x4F9D;&#x9760;&#x5F00;&#x53D1;&#x7684;&#x8C28;&#x614E;&#x4ECD;&#x7136;&#x662F;&#x4E0D;&#x591F;&#x7684;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x4ECB;&#x7ECD;&#x4E00;&#x4E9B;&#x901A;&#x7528;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x53EF;&#x4EE5;&#x964D;&#x4F4E; XSS &#x5E26;&#x6765;&#x7684;&#x98CE;&#x9669;&#x548C;&#x540E;&#x679C;&#x3002;</p>
+<h4 id="&#x5185;&#x5BB9;&#x5B89;&#x5168;&#x7B56;&#x7565;&#xFF08;content-security-policy&#xFF0C;csp&#xFF09;">&#x5185;&#x5BB9;&#x5B89;&#x5168;&#x7B56;&#x7565;&#xFF08;Content Security Policy&#xFF0C;CSP&#xFF09;</h4>
+<p>&#x4E25;&#x683C;&#x7684; CSP &#x5728; XSS &#x7684;&#x9632;&#x8303;&#x4E2D;&#x53EF;&#x4EE5;&#x8D77;&#x5230;&#x4EE5;&#x4E0B;&#x7684;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ul>
+<li>&#x7981;&#x6B62;&#x52A0;&#x8F7D;&#x5916;&#x57DF;&#x4EE3;&#x7801;&#xFF0C;&#x9632;&#x6B62;&#x590D;&#x6742;&#x7684;&#x653B;&#x51FB;&#x903B;&#x8F91;&#xFF1B;</li>
+<li>&#x7981;&#x6B62;&#x5916;&#x57DF;&#x63D0;&#x4EA4;&#xFF0C;&#x7F51;&#x7AD9;&#x88AB;&#x653B;&#x51FB;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x6CC4;&#x6F0F;&#x5230;&#x5916;&#x57DF;&#xFF1B;</li>
+<li>&#x7981;&#x6B62;&#x5185;&#x8054;&#x811A;&#x672C;&#x6267;&#x884C;&#xFF1B;</li>
+<li>&#x7981;&#x6B62;&#x672A;&#x6388;&#x6743;&#x7684;&#x811A;&#x672C;&#x6267;&#x884C;&#xFF1B;</li>
+<li>&#x5408;&#x7406;&#x4F7F;&#x7528;&#x4E0A;&#x62A5;&#x53EF;&#x4EE5;&#x53CA;&#x65F6;&#x53D1;&#x73B0; XSS&#xFF0C;&#x5229;&#x4E8E;&#x5C3D;&#x5FEB;&#x4FEE;&#x590D;&#x95EE;&#x9898;&#x3002;</li>
+</ul>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x5F00;&#x542F;&#x5185;&#x5BB9;&#x5B89;&#x5168;&#x7B56;&#x7565;&#xFF1A;</p>
+<ul>
+<li>HTTP Header &#x4E2D;&#x7684; <code>Content-Security-Policy</code></li>
+<li><code>&lt;meta http-equiv=&quot;Content-Security-Policy&quot;&gt;</code></li>
+</ul>
+<h4 id="&#x8F93;&#x5165;&#x5185;&#x5BB9;&#x957F;&#x5EA6;&#x63A7;&#x5236;">&#x8F93;&#x5165;&#x5185;&#x5BB9;&#x957F;&#x5EA6;&#x63A7;&#x5236;</h4>
+<p>&#x5BF9;&#x4E8E;&#x4E0D;&#x53D7;&#x4FE1;&#x4EFB;&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x90FD;&#x5E94;&#x8BE5;&#x5148;&#x5B9A;&#x4E00;&#x4E2A;&#x5408;&#x7406;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x867D;&#x7136;&#x65E0;&#x6CD5;&#x5B8C;&#x5168;&#x9632;&#x6B62; XSS &#x7684;&#x53D1;&#x751F;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x589E;&#x52A0; XSS &#x653B;&#x51FB;&#x7684;&#x96BE;&#x5EA6;&#x3002;</p>
+<h4 id="httponly">HttpOnly</h4>
+<p>&#x5BF9;&#x654F;&#x611F;&#x7684; cookie &#x8BBE;&#x7F6E; HttpOnly&#xFF0C;&#x7981;&#x6B62; JavaScript &#x8BBF;&#x95EE;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x5728;&#x5B8C;&#x6210; XSS &#x653B;&#x51FB;&#x540E;&#x4E5F;&#x65E0;&#x6CD5;&#x7A83;&#x53D6;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x3002;</p>
+<h2 id="csrf&#x653B;&#x51FB;&#xFF08;&#x8DE8;&#x7AD9;&#x8BF7;&#x6C42;&#x4F2A;&#x9020;&#xFF09;">CSRF&#x653B;&#x51FB;&#xFF08;&#x8DE8;&#x7AD9;&#x8BF7;&#x6C42;&#x4F2A;&#x9020;&#xFF09;</h2>
+<blockquote>
+<p>  CSRF&#xFF08;Cross-site request forgery&#xFF09;&#x8DE8;&#x7AD9;&#x8BF7;&#x6C42;&#x4F2A;&#x9020;&#xFF1A;&#x653B;&#x51FB;&#x8005;&#x53C8;&#x5230;&#x53D7;&#x5BB3;&#x8005;&#x8FDB;&#x5165;&#x7B2C;&#x4E09;&#x65B9;&#x7F51;&#x7AD9;&#xFF0C;&#x5728;&#x7B2C;&#x4E09;&#x65B9;&#x7F51;&#x7AD9;&#x4E2D;&#x5411;&#x88AB;&#x653B;&#x51FB;&#x7F51;&#x7AD9;&#x53D1;&#x9001;&#x8DE8;&#x7AD9;&#x8BF7;&#x6C42;&#x3002;&#x5229;&#x7528;&#x53D7;&#x5BB3;&#x8005;&#x5728;&#x88AB;&#x653B;&#x51FB;&#x7F51;&#x7AD9;&#x5DF2;&#x7ECF;&#x83B7;&#x53D6;&#x7684;&#x6CE8;&#x518C;&#x51ED;&#x8BC1;&#xFF0C;&#x7ED5;&#x8FC7;&#x540E;&#x53F0;&#x7684;&#x7528;&#x6237;&#x9A8C;&#x8BC1;&#xFF0C;&#x8FBE;&#x5230;&#x5192;&#x5145;&#x7528;&#x6237;&#x5BF9;&#x88AB;&#x653B;&#x51FB;&#x7684;&#x7F51;&#x7AD9;&#x6267;&#x884C;&#x67D0;&#x9879;&#x64CD;&#x4F5C;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+</blockquote>
+<p>&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684; CSRF&#x653B;&#x51FB;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x53D7;&#x5BB3;&#x8005;&#x767B;&#x5F55;&#x7F51;&#x7AD9;A&#xFF0C;&#x4FDD;&#x7559;&#x4E86;&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#xFF08;cookie&#xFF09;&#xFF1B;</li>
+<li>&#x653B;&#x51FB;&#x8005;&#x8BF1;&#x5BFC;&#x53D7;&#x5BB3;&#x8005;&#x8BBF;&#x95EE;&#x5371;&#x9669;&#x7F51;&#x7AD9;B&#xFF1B;</li>
+<li>&#x5371;&#x9669;&#x7F51;&#x7AD9;B&#x5411;&#x7F51;&#x7AD9;A&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x6B63;&#x5E38;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x9ED8;&#x8BA4;&#x643A;&#x5E26;&#x5B58;&#x653E;&#x5728;&#x7F51;&#x7AD9;A&#x4E0B;&#x7684; cookie&#xFF1B;</li>
+<li>&#x7F51;&#x7AD9;A&#x5728;&#x63A5;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x5BF9;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#xFF0C;&#x786E;&#x8BA4;&#x662F;&#x53D7;&#x5BB3;&#x8005;&#x7684;&#x51ED;&#x8BC1;&#xFF0C;&#x8BEF;&#x4EE5;&#x4E3A;&#x662F;&#x53D7;&#x5BB3;&#x8005;&#x81EA;&#x5DF1;&#x53D1;&#x9001;&#x7684;&#x8BF7;&#x6C42;&#xFF1B;</li>
+<li>&#x7F51;&#x7AD9;A&#x4EE5;&#x53D7;&#x5BB3;&#x8005;&#x7684;&#x540D;&#x4E49;&#xFF0C;&#x6267;&#x884C;&#x4E86;&#x5371;&#x9669;&#x8BF7;&#x6C42;&#x4E2D;&#x8BF7;&#x6C42;&#x7684;&#x64CD;&#x4F5C;&#xFF1B;</li>
+</ol>
+<h3 id="csrf&#x5206;&#x7C7B;">CSRF&#x5206;&#x7C7B;</h3>
+<h4 id="get-&#x7C7B;&#x578B;&#x7684;-csrf">GET &#x7C7B;&#x578B;&#x7684; CSRF</h4>
+<p>GET &#x7C7B;&#x578B;&#x7684; CSRF &#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684; HTTP &#x8BF7;&#x6C42;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x653E;&#x5728;&#x56FE;&#x7247;&#x7B49;&#x8D44;&#x6E90;&#x91CC;&#x9762;&#xFF0C;&#x53D7;&#x5BB3;&#x8005;&#x5728;&#x6253;&#x5F00;&#x5371;&#x9669;&#x7F51;&#x7AD9;&#x540E;&#xFF0C;&#x5371;&#x9669;&#x7F51;&#x7AD9;&#x7684;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x5C31;&#x53D1;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x5371;&#x9669;&#x7684; GET &#x8BF7;&#x6C42;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x4E00;&#x4E2A; GET &#x7C7B;&#x578B;&#x7684; CSRF &#x653B;&#x51FB;&#x3002;</p>
+<h4 id="post-&#x7C7B;&#x578B;&#x7684;-csrf">POST &#x7C7B;&#x578B;&#x7684; CSRF</h4>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x901A;&#x5E38;&#x4F1A;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x63D0;&#x4EA4;&#x7684;&#x8868;&#x5355;&#x3002;&#x5F53;&#x8BBF;&#x95EE;&#x8BE5;&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x8868;&#x5355;&#x4F1A;&#x81EA;&#x52A8;&#x63D0;&#x4EA4;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x6A21;&#x62DF;&#x7528;&#x6237;&#x5B8C;&#x6210;&#x4E86;&#x4E00;&#x4E2A; POST &#x64CD;&#x4F5C;&#x3002;</p>
+<p>POST &#x7C7B;&#x578B;&#x7684;&#x653B;&#x51FB;&#x901A;&#x5E38;&#x4F1A;&#x6BD4; GET &#x7C7B;&#x578B;&#x7684;&#x66F4;&#x52A0;&#x4E25;&#x683C;&#x4E00;&#x70B9;&#xFF0C;&#x4F46;&#x4ECD;&#x5E76;&#x4E0D;&#x590D;&#x6742;&#xFF0C;&#x6240;&#x4EE5;&#x540E;&#x7AEF;&#x7684;&#x63A5;&#x53E3;&#x5E76;&#x4E0D;&#x80FD;&#x5C06;&#x5B89;&#x5168;&#x5BC4;&#x6258;&#x5728;&#x4EC5;&#x5141;&#x8BB8; POST &#x4E0A;&#x9762;&#x3002;</p>
+<h4 id="&#x94FE;&#x63A5;&#x7C7B;&#x578B;&#x7684;-csrf">&#x94FE;&#x63A5;&#x7C7B;&#x578B;&#x7684; CSRF</h4>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5E76;&#x4E0D;&#x5E38;&#x89C1;&#xFF0C;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;&#x548C; GET &#x7C7B;&#x578B;&#x4E00;&#x81F4;&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981;&#x7528;&#x6237;&#x624B;&#x52A8;&#x70B9;&#x51FB;&#x624D;&#x80FD;&#x89E6;&#x53D1;&#xFF0C;&#x56E0;&#x6B64;&#x653B;&#x51FB;&#x8005;&#x901A;&#x5E38;&#x4F1A;&#x4EE5;&#x5E7F;&#x544A;&#x7684;&#x5F62;&#x5F0F;&#x8BF1;&#x5BFC;&#x7528;&#x6237;&#x4E2D;&#x62DB;&#x3002;</p>
+<h3 id="csrf&#x9632;&#x5FA1;">CSRF&#x9632;&#x5FA1;</h3>
+<p>CSRF&#x653B;&#x51FB;&#x901A;&#x5E38;&#x53D1;&#x751F;&#x5728;&#x7B2C;&#x4E09;&#x65B9;&#x7F51;&#x7AD9;&#xFF0C;&#x88AB;&#x653B;&#x51FB;&#x7684;&#x7F51;&#x7AD9;&#x65E0;&#x6CD5;&#x9632;&#x6B62;&#x653B;&#x51FB;&#x53D1;&#x751F;&#xFF0C;&#x53EA;&#x80FD;&#x63D0;&#x9AD8;&#x81EA;&#x5DF1;&#x7684;&#x5B89;&#x5168;&#x6027;&#x3002;</p>
+<p>CSRF&#x7684;&#x4E24;&#x4E2A;&#x7279;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x53D1;&#x751F;&#x5728;&#x7B2C;&#x4E09;&#x65B9;&#x57DF;&#x540D;&#xFF1B;</li>
+<li>&#x653B;&#x51FB;&#x8005;&#x4E0D;&#x80FD;&#x83B7;&#x53D6; cookie &#x4FE1;&#x606F;&#xFF0C;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+<p>&#x9488;&#x5BF9;&#x8FD9;&#x4E24;&#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E13;&#x95E8;&#x6307;&#x5B9A;&#x9632;&#x62A4;&#x7B56;&#x7565;&#xFF1A;</p>
+<ul>
+<li>&#x963B;&#x6B62;&#x90E8;&#x540D;&#x5916;&#x57DF;&#x7684;&#x8BBF;&#x95EE;<ul>
+<li>&#x540C;&#x6E90;&#x68C0;&#x6D4B;</li>
+<li>Samesite Cookie</li>
+</ul>
+</li>
+<li>&#x63D0;&#x4EA4;&#x65F6;&#x8981;&#x6C42;&#x9644;&#x52A0;&#x672C;&#x57DF;&#x624D;&#x80FD;&#x83B7;&#x53D6;&#x7684;&#x4FE1;&#x606F;<ul>
+<li>Token</li>
+<li>&#x53CC;&#x91CD; Cookie &#x9A8C;&#x8BC1;</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x540C;&#x6E90;&#x68C0;&#x6D4B;">&#x540C;&#x6E90;&#x68C0;&#x6D4B;</h4>
+<p>&#x65E2;&#x7136;&#x5927;&#x591A;&#x6570; CSRF &#x90FD;&#x53D1;&#x751F;&#x5728;&#x7B2C;&#x4E09;&#x65B9;&#x7F51;&#x7AD9;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x76F4;&#x63A5;&#x7981;&#x6B62;&#x5916;&#x57DF;&#x5BF9;&#x6211;&#x4EEC;&#x53D1;&#x8D77;&#x7684;&#x8BF7;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>&#x4F7F;&#x7528; Origin Header &#x786E;&#x5B9A;&#x6765;&#x6E90;&#x57DF;&#x540D;&#xFF1A;&#x5728;&#x90E8;&#x5206;&#x4E0E; CSRF &#x76F8;&#x5173;&#x7684;&#x8BF7;&#x6C42;&#x4E2D;&#xFF0C;&#x8BF7;&#x6C42;&#x5934;&#x4E0D;&#x4F1A;&#x643A;&#x5E26; Origin &#x5B57;&#x6BB5;&#xFF0C;&#x5982;&#x679C; Origin &#x5B57;&#x6BB5;&#x5B58;&#x5728;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x786E;&#x5B9A;&#x6765;&#x6E90;&#x57DF;&#x540D;&#xFF1B;</li>
+<li>&#x4F7F;&#x7528; Referer Header &#x6765;&#x786E;&#x5B9A;&#x6765;&#x6E90;&#x57DF;&#x540D;&#xFF1A;&#x6839;&#x636E; HTTP &#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x8BF7;&#x6C42;&#x7684;&#x5934;&#x90E8;&#x4F1A;&#x6709;&#x4E00;&#x4E2A; Referer &#x5B57;&#x6BB5;&#xFF0C;&#x8BB0;&#x5F55;&#x4E86;&#x8BF7;&#x6C42;&#x7684;&#x6765;&#x6E90;&#x5730;&#x5740;&#x3002;</li>
+</ul>
+<h4 id="csrf-token">CSRF Token</h4>
+<p>CSRF &#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x7279;&#x5F81;&#x662F;&#x653B;&#x51FB;&#x8005;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x7A83;&#x53D6;&#x7528;&#x6237;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4EC5;&#x4EC5;&#x662F;&#x5192;&#x7528;&#x800C;&#x5DF2;&#x3002;</p>
+<p>&#x800C; CSRF &#x4E4B;&#x6240;&#x4EE5;&#x80FD;&#x6210;&#x529F;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x670D;&#x52A1;&#x5668;&#x8BEF;&#x628A;&#x653B;&#x51FB;&#x8005;&#x53D1;&#x9001;&#x7684;&#x8BF7;&#x6C42;&#x5F53;&#x6210;&#x7528;&#x6237;&#x81EA;&#x5DF1;&#x7684;&#x8BF7;&#x6C42;&#x3002;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8981;&#x6C42;&#x6240;&#x6709;&#x7684;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x90FD;&#x643A;&#x5E26;&#x4E00;&#x4E2A; CSRF &#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x5230;&#x7684; Token&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5224;&#x65AD; Token &#x662F;&#x5426;&#x6B63;&#x786E;&#xFF0C;&#x4ECE;&#x800C;&#x5C06;&#x6B63;&#x5E38;&#x7684;&#x8BF7;&#x6C42;&#x548C;&#x653B;&#x51FB;&#x7684;&#x8BF7;&#x6C42;&#x533A;&#x5206;&#x5F00;&#x3002;</p>
+<p>&#x9632;&#x62A4;&#x7B56;&#x7565;&#x5206;&#x4E3A;&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x5C06; CSRF Token &#x8F93;&#x51FA;&#x5230;&#x9875;&#x9762;&#xFF1B;</li>
+<li>&#x9875;&#x9762;&#x63D0;&#x4EA4;&#x7684;&#x8BF7;&#x6C42;&#x643A;&#x5E26;&#x8FD9;&#x4E2A; Token&#xFF1B;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x9A8C;&#x8BC1; Token &#x662F;&#x5426;&#x6B63;&#x786E;&#x3002;</li>
+</ol>
+<h4 id="&#x53CC;&#x91CD;-cookie-&#x9A8C;&#x8BC1;">&#x53CC;&#x91CD; Cookie &#x9A8C;&#x8BC1;</h4>
+<p>&#x539F;&#x7406;&#x548C; Token &#x76F8;&#x4F3C;&#xFF0C;&#x5728;&#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#x65F6;&#xFF0C;&#x5728;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x4E2D;&#x9644;&#x5E26;&#x4E0A;&#x5BF9;&#x5E94;&#x7684; cookie&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x5728;&#x63A5;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x65F6;&#x5BF9;&#x53C2;&#x6570;&#x4E2D;&#x7684; cookie &#x548C; cookie &#x4E2D;&#x7684;&#x503C;&#x8FDB;&#x884C;&#x5BF9;&#x6BD4;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x653B;&#x51FB;&#x8BF7;&#x6C42;&#x3002;</p>
+<h4 id="samesite-cookie-&#x5C5E;&#x6027;">Samesite Cookie &#x5C5E;&#x6027;</h4>
+<p>Google&#x8D77;&#x8349;&#x4E86;&#x4E00;&#x4EFD;&#x8349;&#x6848;&#x6765;&#x6539;&#x8FDB;HTTP&#x534F;&#x8BAE;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x4E3A;Set-Cookie&#x54CD;&#x5E94;&#x5934;&#x65B0;&#x589E;Samesite&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x7528;&#x6765;&#x6807;&#x660E;&#x8FD9;&#x4E2A; Cookie&#x662F;&#x4E2A;&#x201C;&#x540C;&#x7AD9; Cookie&#x201D;&#xFF0C;&#x540C;&#x7AD9;Cookie&#x53EA;&#x80FD;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x65B9;Cookie&#xFF0C;&#x4E0D;&#x80FD;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x65B9;Cookie&#xFF0C;Samesite &#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x503C;:</p>
+<ul>
+<li>Samesite=Strict: &#x8FD9;&#x79CD;&#x79F0;&#x4E3A;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#xFF0C;&#x8868;&#x660E;&#x8FD9;&#x4E2A; Cookie &#x5728;&#x4EFB;&#x4F55;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x4E0D;&#x53EF;&#x80FD;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x65B9; Cookie</li>
+<li>Samesite=Lax: &#x8FD9;&#x79CD;&#x79F0;&#x4E3A;&#x5BBD;&#x677E;&#x6A21;&#x5F0F;&#xFF0C;&#x6BD4; Strict &#x653E;&#x5BBD;&#x4E86;&#x70B9;&#x9650;&#x5236;,&#x5047;&#x5982;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x662F;&#x8FD9;&#x79CD;&#x8BF7;&#x6C42;&#x4E14;&#x540C;&#x65F6;&#x662F;&#x4E2A;GET&#x8BF7;&#x6C42;&#xFF0C;&#x5219;&#x8FD9;&#x4E2A;Cookie&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x65B9;Cookie</li>
+</ul>
+<h2 id="&#x7F51;&#x7EDC;&#x52AB;&#x6301;">&#x7F51;&#x7EDC;&#x52AB;&#x6301;</h2>
+<h3 id="&#x7F51;&#x7EDC;&#x52AB;&#x6301;&#x7684;&#x5206;&#x7C7B;">&#x7F51;&#x7EDC;&#x52AB;&#x6301;&#x7684;&#x5206;&#x7C7B;</h3>
+<ul>
+<li>DNS&#x52AB;&#x6301;&#xFF1A;&#x8F93;&#x5165;&#x4EAC;&#x4E1C;&#x88AB;&#x5F3A;&#x5236;&#x8DF3;&#x8F6C;&#x5230;&#x6DD8;&#x5B9D;&#x5C31;&#x5C5E;&#x4E8E; DNS&#x52AB;&#x6301;&#x3002;<ul>
+<li>DNS&#x5F3A;&#x5236;&#x89E3;&#x6790;&#xFF1A;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x8FD0;&#x8425;&#x5546;&#x672C;&#x5730; DNS &#x8BB0;&#x5F55;&#xFF0C;&#x6765;&#x5F15;&#x5BFC;&#x7528;&#x6237;&#x6D41;&#x91CF;&#x5230;&#x7F13;&#x5B58;&#x670D;&#x52A1;&#x5668;&#xFF1B;</li>
+<li>302 &#x8DF3;&#x8F6C;&#xFF1A;&#x901A;&#x8FC7;&#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x51FA;&#x53E3;&#x7684;&#x6D41;&#x91CF;&#xFF0C;&#x5206;&#x6790;&#x5224;&#x65AD;&#x54EA;&#x4E9B;&#x5185;&#x5BB9;&#x662F;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x52AB;&#x6301;&#x5904;&#x7406;&#xFF0C;&#x5728;&#x5BF9;&#x52AB;&#x6301;&#x7684;&#x5185;&#x5B58;&#x53D1;&#x8D77; 302 &#x8DF3;&#x8F6C;&#x7684;&#x56DE;&#x590D;&#xFF0C;&#x5F15;&#x5BFC;&#x7528;&#x6237;&#x83B7;&#x53D6;&#x5185;&#x5BB9;&#x3002;</li>
+</ul>
+</li>
+<li>HTTP&#x52AB;&#x6301;&#xFF1A;&#x4F8B;&#x5982;&#x8BBF;&#x95EE;&#x767E;&#x5EA6;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x76F4;&#x6709;&#x8D2A;&#x73A9;&#x84DD;&#x6708;&#x7684;&#x5E7F;&#x544A;&#x3002;&#x7531;&#x4E8E; HTTP &#x662F;&#x660E;&#x6587;&#x4F20;&#x8F93;&#xFF0C;&#x8FD0;&#x8425;&#x5546;&#x4F1A;&#x4FEE;&#x6539;&#x4F60;&#x7684; HTTP &#x54CD;&#x5E94;&#x5185;&#x5BB9;&#xFF08;&#x5373;&#x52A0;&#x5E7F;&#x544A;&#xFF09;&#x3002;</li>
+</ul>
+<h3 id="&#x7F51;&#x7EDC;&#x52AB;&#x6301;&#x9632;&#x5FA1;">&#x7F51;&#x7EDC;&#x52AB;&#x6301;&#x9632;&#x5FA1;</h3>
+<p>DNS&#x52AB;&#x6301;&#x7531;&#x4E8E;&#x6D89;&#x5ACC;&#x8FDD;&#x6CD5;&#xFF0C;&#x5DF2;&#x7ECF;&#x88AB;&#x76D1;&#x7BA1;&#x8D77;&#x6765;&#xFF0C;&#x73B0;&#x5728;&#x5F88;&#x5C11;&#x4F1A;&#x9047;&#x5230; DNS &#x52AB;&#x6301;&#x3002;</p>
+<p>&#x4F46;&#x662F; HTTP &#x52AB;&#x6301;&#x4F9D;&#x7136;&#x975E;&#x5E38;&#x76DB;&#x884C;&#xFF0C;&#x6700;&#x6709;&#x6548;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x4F7F;&#x7528; HTTPS&#xFF0C;&#x5C06; HTTP &#x52A0;&#x5BC6;&#x8D77;&#x6765;&#xFF0C;&#x8FD0;&#x8425;&#x5546;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x660E;&#x6587;&#xFF0C;&#x5C31;&#x65E0;&#x6CD5;&#x52AB;&#x6301;&#x4F60;&#x7684;&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#x3002;</p>
+<h2 id="&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;&#xFF08;man-in-the-middle-attack&#xFF0C;mitm&#xFF09;">&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;&#xFF08;Man-in-the-middle attack&#xFF0C;MITM&#xFF09;</h2>
+<p>&#x4E2D;&#x95F4;&#x4EBA;&#x662F;&#x6307;&#x653B;&#x51FB;&#x8005;&#x4E0E;&#x901A;&#x8BAF;&#x4E24;&#x7AEF;&#x5206;&#x522B;&#x521B;&#x5EFA;&#x72EC;&#x7ACB;&#x7684;&#x8054;&#x7CFB;&#xFF0C;&#x5E76;&#x4EA4;&#x6362;&#x5176;&#x6240;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F7F;&#x901A;&#x8BAF;&#x7684;&#x4E24;&#x7AEF;&#x90FD;&#x8BA4;&#x4E3A;&#x4ED6;&#x4EEC;&#x6B63;&#x5728;&#x4E00;&#x4E2A;&#x79C1;&#x5BC6;&#x7684;&#x8FDE;&#x63A5;&#x4E0E;&#x5BF9;&#x65B9;&#x76F4;&#x63A5;&#x5BF9;&#x8BDD;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x6574;&#x4E2A;&#x4F1A;&#x8BDD;&#x90FD;&#x88AB;&#x653B;&#x51FB;&#x8005;&#x5B8C;&#x5168;&#x63A7;&#x5236;&#x3002;&#x5728;&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;&#x4E2D;&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x62E6;&#x622A;&#x901A;&#x8BAF;&#x53CC;&#x65B9;&#x7684;&#x901A;&#x8BDD;&#xFF0C;&#x5E76;&#x63D2;&#x5165;&#x65B0;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x670D;&#x52A1;&#x7AEF;&#x8BF7;&#x6C42;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x8BF7;&#x6C42;&#x88AB;&#x4E2D;&#x95F4;&#x4EBA;&#x62E6;&#x622A;&#xFF1B;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x516C;&#x94A5;&#xFF1B;</li>
+<li>&#x4E2D;&#x95F4;&#x4EBA;&#x622A;&#x53D6;&#x516C;&#x94A5;&#xFF0C;&#x4FDD;&#x7559;&#x5728;&#x81EA;&#x5DF1;&#x624B;&#x4E0A;&#xFF0C;&#x5E76;&#x4F2A;&#x9020;&#x4E00;&#x4E2A;&#x516C;&#x94A5;&#x53D1;&#x9001;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#xFF1B;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x6536;&#x5230;&#x4F2A;&#x9020;&#x7684;&#x516C;&#x94A5;&#x540E;&#xFF0C;&#x751F;&#x6210;&#x52A0;&#x5BC6;&#x5BC6;&#x94A5;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x7AEF;&#xFF1B;</li>
+<li>&#x4E2D;&#x95F4;&#x4EBA;&#x901A;&#x8FC7;&#x79C1;&#x94A5;&#x89E3;&#x5BC6;&#x5F97;&#x5230;&#x771F;&#x5BC6;&#x94A5;&#xFF0C;&#x540C;&#x65F6;&#x751F;&#x6210;&#x5047;&#x7684;&#x5BC6;&#x94A5;&#xFF0C;&#x7528;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x540E;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x7AEF;&#xFF1B;</li>
+<li>&#x670D;&#x52A1;&#x7AEF;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#x7528;&#x79C1;&#x94A5;&#x89E3;&#x5BC6;&#x5F97;&#x5230;&#x5047;&#x7684;&#x5BC6;&#x94A5;&#xFF0C;&#x7136;&#x540E;&#x7528;&#x5047;&#x7684;&#x5BC6;&#x94A5;&#x52A0;&#x5BC6;&#x660E;&#x6587;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</li>
+</ul>
+<h2 id="iframe-&#x6EE5;&#x7528;">Iframe &#x6EE5;&#x7528;</h2>
+<p>&#x4E25;&#x683C;&#x6765;&#x8BF4;&#x8FD9;&#x4E2A;&#x4E0D;&#x7B97;&#x662F;&#x5B89;&#x5168;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x662F;&#x8981;&#x9632;&#x8303;&#x81EA;&#x5DF1;&#x7F51;&#x7AD9;&#x88AB;&#x4EBA;&#x7528; iframe &#x5D4C;&#x5957;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<h3 id="&#x6DFB;&#x52A0;&#x54CD;&#x5E94;&#x5934;">&#x6DFB;&#x52A0;&#x54CD;&#x5E94;&#x5934;</h3>
+<p>&#x5728;&#x54CD;&#x5E94;&#x5934;&#x4E2D;&#x52A0;&#x4E00;&#x4E2A; <code>X-Frame-Options</code></p>
+<p>&#x53D6;&#x503C;&#x6709;&#x4E09;&#x79CD;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x652F;&#x6301;&#xFF1A;</p>
+<ul>
+<li>DENY&#xFF1A;&#x62D2;&#x7EDD;&#x5F53;&#x524D;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x4EFB;&#x4F55; Frame &#x9875;&#x9762;&#xFF1B;</li>
+<li>SAMEORIGIN&#xFF1A;Frame &#x9875;&#x9762;&#x53EA;&#x80FD;&#x52A0;&#x8F7D;&#x5728;&#x540C;&#x6E90;&#x7F51;&#x7AD9;&#x4E0B;&#xFF1B;</li>
+<li>ALLOW-FROM origin&#xFF1A;origin &#x4E3A;&#x5141;&#x8BB8; Frame &#x9875;&#x9762;&#x52A0;&#x8F7D;&#x7684;&#x5730;&#x5740;&#x3002;</li>
+</ul>
+<h3 id="js-&#x811A;&#x672C;">js &#x811A;&#x672C;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (<span class="hljs-built_in">window</span> != <span class="hljs-built_in">window</span>.top) {
+    <span class="hljs-built_in">window</span>.top.location.replace(<span class="hljs-built_in">window</span>.location)
+    <span class="hljs-comment">// &#x8FD9;&#x662F;&#x76F4;&#x63A5;&#x4EE3;&#x66FF;&#x5916;&#x7A97;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5E72;&#x522B;&#x7684;</span>
+}
+</code></pre>
+<h2 id="jsonp-&#x5B89;&#x5168;&#x95EE;&#x9898;">jsonp &#x5B89;&#x5168;&#x95EE;&#x9898;</h2>
+<h3 id="csrf-&#x653B;&#x51FB;">CSRF &#x653B;&#x51FB;</h3>
+<p>&#x524D;&#x7AEF;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x6076;&#x610F;&#x9875;&#x9762;&#xFF0C;&#x8BF7;&#x6C42; JSONP &#x63A5;&#x53E3;&#xFF0C;&#x6536;&#x96C6;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x3002;&#x5982;&#x679C; JSONP &#x63A5;&#x53E3;&#x8FD8;&#x6D89;&#x53CA;&#x4E00;&#x4E9B;&#x654F;&#x611F;&#x64CD;&#x4F5C;&#x6216;&#x4FE1;&#x606F;&#xFF08;&#x5982;&#x767B;&#x9646;&#x3001;&#x5220;&#x9664;&#x7B49;&#x64CD;&#x4F5C;&#xFF09;&#x5C31;&#x66F4;&#x4E0D;&#x5B89;&#x5168;&#x4E86;&#x3002;</p>
+<p><strong>&#x89E3;&#x51B3;&#x529E;&#x6CD5;</strong>&#xFF1A;&#x9A8C;&#x8BC1; JSONP &#x7684;&#x8C03;&#x7528;&#x6765;&#x6E90;&#xFF08;Referer&#xFF09;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x5224;&#x65AD; Referer &#x662F;&#x5426;&#x662F;&#x767D;&#x540D;&#x5355;&#xFF0C;&#x6216;&#x8005;&#x90E8;&#x7F72;&#x968F;&#x673A; Token &#x6765;&#x9632;&#x5FA1;&#xFF1B;&#x907F;&#x514D;&#x654F;&#x611F;&#x63A5;&#x53E3;&#x4F7F;&#x7528; JSONP &#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="xss-&#x6F0F;&#x6D1E;">XSS &#x6F0F;&#x6D1E;</h3>
+<p>&#x4E0D;&#x4E25;&#x8C28;&#x7684; content-type &#x5BFC;&#x81F4;&#x7684; XSS &#x6F0F;&#x6D1E;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4E25;&#x683C;&#x5B9A;&#x4E49;&#x597D; content-type&#xFF08;content-type&#xFF1A;application/json&#xFF09;&#xFF0C;&#x518D;&#x52A0;&#x4E0A;&#x6CA1;&#x6709;&#x8FC7;&#x6EE4; callback &#x7684;&#x53C2;&#x6570;&#xFF0C;&#x76F4;&#x63A5;&#x5F53; html &#x89E3;&#x6790;&#xFF0C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x8D64;&#x88F8;&#x88F8;&#x7684; XSS&#x3002;</p>
+<p><strong>&#x89E3;&#x51B3;&#x529E;&#x6CD5;</strong>&#xFF1A;&#x4E25;&#x683C;&#x5B9A;&#x4E49; content-type&#xFF1A;application/json&#xFF0C;&#x7136;&#x540E;&#x4E25;&#x683C;&#x8FC7;&#x6EE4; callback &#x540E;&#x7684;&#x53C2;&#x6570;&#x5E76;&#x9650;&#x5236;&#x957F;&#x5EA6;&#xFF08;&#x8FDB;&#x884C;&#x5B57;&#x7B26;&#x8F6C;&#x8BD1;&#xFF09;&#xFF0C;&#x8FD9;&#x6837;&#x8FD4;&#x56DE;&#x7684;&#x811A;&#x672C;&#x5185;&#x5BB9;&#x4F1A;&#x53D8;&#x6210;&#x6587;&#x672C;&#x683C;&#x5F0F;&#xFF0C;&#x811A;&#x672C;&#x5C06;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#xFF09;</p>
+<h2 id="&#x5BC6;&#x7801;&#x4F20;&#x8F93;">&#x5BC6;&#x7801;&#x4F20;&#x8F93;</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="record.html" class="navigation navigation-next navigation-unique" aria-label="Next page: web安全在工作中的实践">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"web安全","level":"1.4.1","depth":2,"next":{"title":"web安全在工作中的实践","level":"1.4.2","depth":2,"path":"chapter/safety/record.md","ref":"chapter/safety/record.md","articles":[]},"previous":{"title":"[web安全]","level":"1.4","depth":1,"ref":"","articles":[{"title":"web安全","level":"1.4.1","depth":2,"path":"chapter/safety/index.md","ref":"chapter/safety/index.md","articles":[]},{"title":"web安全在工作中的实践","level":"1.4.2","depth":2,"path":"chapter/safety/record.md","ref":"chapter/safety/record.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"hedong","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"hd-gitbook","variables":{},"title":"前端学习","gitbook":"*","description":"个人博客"},"file":{"path":"chapter/safety/index.md","mtime":"2023-05-21T07:44:51.677Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-21T08:46:16.965Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

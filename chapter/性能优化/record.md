@@ -89,7 +89,167 @@
 
 * 修改node 版本：node 版本改为了12；
 * 增加node内存：“build” ： “node --man_old_space_size = 1024 * 2 node_modules/.bin/vue-cli-service build”；
-* 代码或依赖优化：按需加载（lodash、echart、MTD、element ui）、DLL（axios、vue）；
+* 代码或依赖优化：
+
+  * 按需加载（lodash、echart、MTD、element ui、moment）；
+
+  ```
+  // 减少语言包打包体积
+  config.plugins.push(
+  	new webpack.ContextReplcementPlugin(/moment[/\\]locale$/, /zh-cn|en/);
+  )
+  ```
+
+  
+
+  * DLL（axios、vue）；
+
+  ```
+  // webpack.dll.config.js
+  const webpack = require('webpack');
+  const fs = require('fs');
+  
+  moodule.export = {
+  	entry: {
+  		vue_vueRouter_vuex_axios: ['vue', 'vue-router', 'vuex', 'axios'],
+  		vue: ['vue'],
+  		vueRouter: ['vue-router'],
+  		vuex: ['vuex'],
+  		axios: ['axios'],
+  	},
+  	output: {
+  		path: fs.resolve(__dirname, 'dll'),
+  		filename: '[name]_dll.js',
+  		library: '[name]_lib'
+  	},
+  	plugins: [
+  		new webpack.DLLPlugin({
+  			path: fs.join(__dirname, 'dll', '[name]_manifest.json'),
+  			// name与上面的library，需要对应起来
+  			name: '[name]_lib'
+  		})
+  	]
+  }
+  
+  -----
+  将生成的文件上传到S3中
+  ----
+  
+  // vue.config.js
+  
+  configureWebpack: config => {
+  	if (config.mode === 'production') {
+  		const dllLibNames = ['vue_vueRouter_vuex_axios'];
+  		const dllCdnPublicPath = 'xxx.com';
+  		const dllPlugins = [];
+  		const script = [];
+  		
+  		dllLibNames.forEach((name, i) => {
+  			dllPlugins.push({
+  				new webpack.DLLReferencePlugin({
+  					manifest: fs.join(dllCdnPublicPath, `${name}_manifest.json`)
+  				})
+  			})
+  			script.push({
+  				path: `${name}.dll.js`,
+  				attributes: {
+  					crossorigin: 'anonymous'
+  				}
+  			})
+  			if (i === dllLibNames.length - 1) {
+  				dllPlugins.push(
+  					new HtmlWebpackTagsPlugin({
+  						append: false,
+  						publicPath: dllCdnPublicPath,
+  						script
+  					})
+  				)
+  			}
+  		})
+  		config.plugins.push(...dllPlugins);
+  	}
+  }
+  
+  ```
+
+  
+
+  * 多进程打包thread-loader：提效明显
+    * 巨石项目：20+M
+      * 多进程：19 - 23 s；
+      * 单进程：55 - 63 s；
+  
+    * 轻项目：
+      * 多进程：5 - 7 s；
+      * 单进程：13 - 15 s；
+  
+  
+  ```
+  // vue.config.js
+  
+  configureWebpack: config => {
+  	if (config.mode === 'production') {
+  		config.module.rules.push({
+  			test: '/\.js$/',
+  			exclude: '/node_modules/'
+  			use:[
+  				{
+  					loader: 'thread-loader'
+  					option: {
+  						workers: require('os').cpus().length - 1,
+  						workerParallelJobs: 50,
+  						poolTimeout: 2000
+  					}
+  				},
+  				'babel-loader'
+  			]
+  		})
+  		config.module.rules.push({
+  			test: '/\.vue$/',
+  			exclude: '/node_modules/'
+  			use:[
+  				{
+  					loader: 'thread-loader'
+  					options: {
+  						workers: require('os').cpus().length - 1,
+  						workerParallelJobs: 50,
+  						poolTimeout: 2000
+  					}
+  				},
+  				'vue-loader'
+  			]
+  		})
+  		config.module.rules.push({
+  			test: '/\.tsx?$/',
+  			exclude: '/node_modules/'
+  			use:[
+  				{
+  					loader: 'thread-loader'
+  					options: {
+  						workers: require('os').cpus().length - 1,
+  						workerParallelJobs: 50,
+  						poolTimeout: 2000
+  					}
+  				},
+  				'babel-loader',
+  				{
+  					loader: 'thread-loader'
+  					options: {
+  						// 将tsx文件添加到vue文件的ts代码块中
+  						appendTsxSuffixTo: ['/\.vue$/'],
+  						experimentalWatchApi: true,
+  						// 多进程打包，不配置的话，打包会报错
+  						happyPackMode: true,
+  						// 禁用类型检查，提高构建速度
+  						tranpileOnly: true
+  					}
+  				}
+  			]
+  		})
+  	}
+  }
+  ```
+  
 * webpack插件：写了一个注释文件大小的插件，可以清晰地看见每个文件的大小；
 
 ```
