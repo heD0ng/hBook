@@ -509,13 +509,79 @@ const fs = require(&apos;fs&apos;);</p>
     });
   }
 }</p>
-<p>module.exports = FileSizePlugin;
+<p>module.exports = FileSizePlugin;</p>
+<pre><code>
+#### &#x6700;&#x540E;
+
+&#x603B;&#x4F53;&#x4E0A;&#xFF0C;&#x63D0;&#x5347;&#x4E86;&#x81EA;&#x5DF1;&#x5B9A;&#x4F4D;&#x3001;&#x601D;&#x8003;&#x3001;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x7684;&#x80FD;&#x529B;&#x3002;
+
+
+
+### &#x573A;&#x666F;&#x4E09;-&#x5168;&#x91CF;&#x52A0;&#x8F7D;
+
+#### &#x80CC;&#x666F;
+
+&#x67D0;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x5168;&#x91CF;&#x52A0;&#x8F7D;&#x6240;&#x6709;&#x4ED3;&#x5E97;&#x6570;&#x636E;&#xFF08;60000+&#xFF09;&#xFF0C;&#x5BFC;&#x81F4;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x3001;&#x6E32;&#x67D3;&#x7B49;&#x5361;&#x987F;&#x95EE;&#x9898;&#x3002;
+
+
+
+### &#x573A;&#x666F;&#x56DB;-&#x81EA;&#x52A8;&#x5316;&#x63D2;&#x5165;&#x6807;&#x7B7E;
+
+* script&#x5FC5;&#x987B;&#x662F;**&#x53CC;&#x6807;&#x7B7E;**&#xFF1B;
+</code></pre><p>class InsertLinkPlugin {
+    constructor(options) {
+        this.options = Array.isArray(options) ? options: [options];
+    }
+    apply(compiler) {
+        compiler.hooks.emit.tapAsync(&apos;InsertLinkPlugin&apos;, (compilation, callback) =&gt; {
+            let html = compilation.assets[&apos;index.html&apos;];
+            this.options.forEach(option =&gt; {
+                if (/dns/.test(option.type.toLowerCase())) {
+                    const tag = <code>&lt;link rel=&quot;dns-prefetch&quot; href=&quot;${option.url}&quot; /&gt;</code>;
+                    html = html.replace(&apos;<title>&apos;, <code>${tag}&lt;title&gt;</code>)
+                } else if (/(js|javascript)/.test(option.type.toLowerCase())) {
+                    if (option.defer) {
+                        const tag = <code>&lt;script rel=&quot;text/javascript&quot; href=&quot;${option.url}&quot; defer &gt;&lt;/script&gt;</code>;
+                        html = html.replace(&apos;&lt;/body&gt;&apos;, <code>${tag}&lt;/body&gt;</code>)
+                    } else if (option.async) {
+                        const tag = <code>&lt;script rel=&quot;text/javascript&quot; href=&quot;${option.url}&quot; async &gt;&lt;/script&gt;</code>;
+                        html = html.replace(&apos;&lt;/body&gt;&apos;, <code>${tag}&lt;/body&gt;</code>)
+                    } else {
+                        const tag = <code>&lt;script rel=&quot;text/javascript&quot; href=&quot;${option.url}&quot; &gt;&lt;/script&gt;</code>;
+                        html = html.replace(&apos;&lt;/body&gt;&apos;, <code>${tag}&lt;/body&gt;</code>)
+                    }
+                } else if (/css/.test(option.type.toLowerCase())) {
+                    const tag = <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;${option.url}&quot; /&gt;</code>;
+                    html = html.replace(&apos;&lt;/body&gt;&apos;, <code>${tag}&lt;/body&gt;</code>)
+                }
+            })</title></p>
+<pre><code>        compilation.assets[&apos;index.html&apos;] = {
+            source: () =&gt; html,
+            size: () =&gt; html.length
+        };
+        callback();
+    })
+}
+</code></pre><p>}</p>
+<p>config.plugins.push(
+    new InsertLinkPlugin([
+        {
+            url: &apos;//lx.meituan.net&apos;,
+            type: &apos;dns&apos;
+        },
+        {
+            url: &apos;//lx.meituan.com&apos;,
+            type: &apos;js&apos;,
+            defer: true
+        },
+        {
+            url: &apos;//s3plus.meituan.net&apos;,
+            type: &apos;js&apos;,
+            async: true
+        },
+    ])
+)
 ```</p>
-<h4 id="&#x6700;&#x540E;">&#x6700;&#x540E;</h4>
-<p>&#x603B;&#x4F53;&#x4E0A;&#xFF0C;&#x63D0;&#x5347;&#x4E86;&#x81EA;&#x5DF1;&#x5B9A;&#x4F4D;&#x3001;&#x601D;&#x8003;&#x3001;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x7684;&#x80FD;&#x529B;&#x3002;</p>
-<h3 id="&#x573A;&#x666F;&#x4E09;-&#x5168;&#x91CF;&#x52A0;&#x8F7D;">&#x573A;&#x666F;&#x4E09;-&#x5168;&#x91CF;&#x52A0;&#x8F7D;</h3>
-<h4 id="&#x80CC;&#x666F;">&#x80CC;&#x666F;</h4>
-<p>&#x67D0;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x5168;&#x91CF;&#x52A0;&#x8F7D;&#x6240;&#x6709;&#x4ED3;&#x5E97;&#x6570;&#x636E;&#xFF08;60000+&#xFF09;&#xFF0C;&#x5BFC;&#x81F4;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x3001;&#x6E32;&#x67D3;&#x7B49;&#x5361;&#x987F;&#x95EE;&#x9898;&#x3002;</p>
 
                                 
                                 </section>
@@ -555,7 +621,7 @@ const fs = require(&apos;fs&apos;);</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"性能优化在工作中的实践","level":"1.5.2","depth":2,"previous":{"title":"PWA","level":"1.5.1","depth":2,"path":"chapter/性能优化/PWA.md","ref":"chapter/性能优化/PWA.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"hedong","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"hd-gitbook","variables":{},"title":"前端学习","gitbook":"*","description":"个人博客"},"file":{"path":"chapter/性能优化/record.md","mtime":"2023-05-21T08:15:18.821Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-21T08:56:40.064Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"性能优化在工作中的实践","level":"1.5.2","depth":2,"previous":{"title":"PWA","level":"1.5.1","depth":2,"path":"chapter/性能优化/PWA.md","ref":"chapter/性能优化/PWA.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"hedong","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"hd-gitbook","variables":{},"title":"前端学习","gitbook":"*","description":"个人博客"},"file":{"path":"chapter/性能优化/record.md","mtime":"2023-05-23T13:45:52.375Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-23T13:46:07.731Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

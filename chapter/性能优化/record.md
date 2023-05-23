@@ -281,3 +281,68 @@ module.exports = FileSizePlugin;
 #### 背景
 
 某一个页面，全量加载所有仓店数据（60000+），导致页面加载、渲染等卡顿问题。
+
+
+
+### 场景四-自动化插入标签
+
+* script必须是**双标签**；
+
+```
+class InsertLinkPlugin {
+    constructor(options) {
+        this.options = Array.isArray(options) ? options: [options];
+    }
+    apply(compiler) {
+        compiler.hooks.emit.tapAsync('InsertLinkPlugin', (compilation, callback) => {
+            let html = compilation.assets['index.html'];
+            this.options.forEach(option => {
+                if (/dns/.test(option.type.toLowerCase())) {
+                    const tag = `<link rel="dns-prefetch" href="${option.url}" />`;
+                    html = html.replace('<title>', `${tag}<title>`)
+                } else if (/(js|javascript)/.test(option.type.toLowerCase())) {
+                    if (option.defer) {
+                        const tag = `<script rel="text/javascript" href="${option.url}" defer ></script>`;
+                        html = html.replace('</body>', `${tag}</body>`)
+                    } else if (option.async) {
+                        const tag = `<script rel="text/javascript" href="${option.url}" async ></script>`;
+                        html = html.replace('</body>', `${tag}</body>`)
+                    } else {
+                        const tag = `<script rel="text/javascript" href="${option.url}" ></script>`;
+                        html = html.replace('</body>', `${tag}</body>`)
+                    }
+                } else if (/css/.test(option.type.toLowerCase())) {
+                    const tag = `<link rel="stylesheet" href="${option.url}" />`;
+                    html = html.replace('</body>', `${tag}</body>`)
+                }
+            })
+
+            compilation.assets['index.html'] = {
+                source: () => html,
+                size: () => html.length
+            };
+            callback();
+        })
+    }
+}
+
+config.plugins.push(
+    new InsertLinkPlugin([
+        {
+            url: '//lx.meituan.net',
+            type: 'dns'
+        },
+        {
+            url: '//lx.meituan.com',
+            type: 'js',
+            defer: true
+        },
+        {
+            url: '//s3plus.meituan.net',
+            type: 'js',
+            async: true
+        },
+    ])
+)
+```
+
